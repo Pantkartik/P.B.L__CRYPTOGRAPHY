@@ -1,0 +1,121 @@
+.hero-bg {
+  height: 100vh;
+  display: flex;
+  align-items: stretch;
+  justify-content: flex-start;
+  position: relative;
+  background: url("/hero-bg.jpg") center/cover no-repeat;
+  margin-top: 72px; /* height of header to avoid overlap */
+  padding: 0 5vw;
+  user-select: none;
+}
+
+.hero-card {
+  margin-top: 120px;
+  max-width: 440px;
+  background: rgba(31 45 62 / 0.7);
+  border-radius: 24px;
+  padding: 42px 38px 32px 38px;
+  box-shadow: 0 6px 48px #0006;
+  color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+.hero-title {
+  font-weight: 800;
+  font-size: 3.2rem;
+  margin-bottom: 18px;
+  line-height: 1.1;
+}
+
+.hero-desc {
+  font-size: 1.2rem;
+  margin-bottom: 42px;
+  color: #d9e6ea;
+}
+
+.hero-btns {
+  display: flex;
+  gap: 18px;
+}
+
+.hero-btns .download-btn,
+.hero-btns .login-btn {
+  border-radius: 60px;
+  border: none;
+  font-weight: 600;
+  padding: 12px 40px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  user-select: none;
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+.hero-btns .download-btn {
+  background: #25d366;
+  color: white;
+}
+
+.hero-btns .download-btn:hover,
+.hero-btns .download-btn:focus {
+  background: #1ea34d;
+}
+
+.hero-btns .login-btn {
+  background: transparent;
+  border: 1px solid white;
+  color: white;
+}
+
+.hero-btns .login-btn:hover,
+.hero-btns .login-btn:focus {
+  background: white;
+  color: #25d366;
+  border-color: #25d366;
+}
+
+/* Overlay images container (for chat bubble etc) */
+.hero-chat-overlays {
+  position: absolute;
+  right: 8vw;
+  top: 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 40px;
+  user-select: none;
+}
+
+/* Image styling, adjust sizes as needed */
+.hero-chat-overlays img {
+  max-width: 320px;
+  pointer-events: none;
+  user-select: none;
+  border-radius: 20px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
+}
+
+/* Responsive for smaller widths */
+@media (max-width: 900px) {
+  .hero-bg {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 2rem;
+  }
+  .hero-card {
+    max-width: 90vw;
+    margin: 3rem 0 2rem 0;
+  }
+  .hero-chat-overlays {
+    position: static;
+    flex-direction: row;
+    justify-content: center;
+    gap: 32px;
+    margin-top: 2rem;
+  }
+  .hero-chat-overlays img {
+    max-width: 180px;
+  }
+}
