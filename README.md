@@ -6,7 +6,7 @@ Project Overview
 Project Name: Encrypted Chat Application
 Purpose: To provide users with a secure and private messaging solution utilizing state-of-the-art end-to-end encryption, similar to WhatsApp or Signal, for daily secure communications.
 
-Team Members
+
 Team Leader: Kartik Pant
 
 Team Members: Nivedita Dani, Diva Tripathi, Abhay Goswami
